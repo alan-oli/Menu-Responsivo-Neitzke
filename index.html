@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Menu Responsivo</title>
+</head>
+<body>
+    <header>
+        <button class="btn-icon" onclick="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="hsla(0, 16%, 77%, 0.7)" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </button>
+
+        <div class="logo">
+            <h2 class="texto">Logo</h1>
+        </div>
+
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <button class="close-icon" onclick="toggleSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="hsla(0, 16%, 77%, 0.7)" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                  </svg>
+                </button>
+
+                <li><a href="" class="nav-item">Home</a></li>
+                <li><a href="" class="nav-item">Cursos</a></li>
+                <li><a href="" class="nav-item">Sobre Nós</a></li>
+                <li><a href="" class="nav-item">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content" onclick="closeSidebar()">
+        <h1>Menu Responsivo!</h1>
+    </section>
+</body>
+</html>

@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #272727;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2d2d2d;
+    display: flex;
+    padding: 1.5rem 4rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.15rem;
+    box-shadow: 0  -1px 8px black;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+}
+
+.nav-item {
+    color: #b040ff;
+    font-weight: bold;
+    transition: 1s ease;
+}
+
+.nav-item-active {
+    background-color: #414141;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-item:hover {
+    color: white;
+}
+
+.texto {
+    position: relative;
+    cursor: pointer;
+    color: hsla(0, 0%, 100%, .7);
+}
+
+.texto::before {
+    content: "Logo";
+    position: absolute;
+    color: #b040ff;
+    width: 0;
+    overflow: hidden;
+    text-shadow: 1px 1px 1px #b040ff,
+                 -1px -1px 1px #b040ff;    
+}
+
+.texto:hover::before {
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.content {
+    display: flex;
+    height: 26rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    transition: all 1s ease;
+    padding: 5rem;
+    z-index: -1;
+}
+
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+.close-icon {
+    background-color: transparent;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 737px) {
+    .nav-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-duration: 1s;
+        margin-left: -100%;
+    }
+ 
+    .nav-list {
+        height: 100vh;
+        position: absolute;
+        flex-direction: column;
+        background-color: #343434;
+        width: 20rem;
+        padding: 2rem;
+        gap: 4rem;
+        box-shadow: -2px 0px 50px black,
+                     -10px -0 30px white;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .close-icon {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-icon {
+        display: block;
+    }
+}
+
+@keyframes showSidebar {
+    
+    from {
+        margin-left: -100%;
+    }
+
+    to {
+        margin-left: 0;
+    }
+
+}
+
+@keyframes hideSidebar {
+    from{
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: -100%;
+    }    
+}
